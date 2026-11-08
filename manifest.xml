@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+  <Id>7c1e4a52-3b8d-4f6e-9a21-5d0c8e7f1b34</Id>
+  <Version>1.6.0.0</Version>
+  <ProviderName>PPT Toolkit</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="PPT Toolkit"/>
+  <Description DefaultValue="Align, distribute, resize and swap shapes from the ribbon."/>
+  <IconUrl DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignLeft-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignLeft-80.png"/>
+  <SupportUrl DefaultValue="https://dtribek.github.io/ppt-toolkit-site/commands.html"/>
+  <Hosts><Host Name="Presentation"/></Hosts>
+  <DefaultSettings><SourceLocation DefaultValue="https://dtribek.github.io/ppt-toolkit-site/taskpane.html"/></DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Presentation">
+        <DesktopFormFactor>
+          <FunctionFile resid="Commands.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="PptToolkit.Tab">
+            <Group id="Group.Align">
+              <Label resid="Group.Align"/>
+              <Icon><bt:Image size="16" resid="Icon.alignLeft.16"/><bt:Image size="32" resid="Icon.alignLeft.32"/><bt:Image size="80" resid="Icon.alignLeft.80"/></Icon>
+              <Control xsi:type="Button" id="Btn.alignLeft">
+                <Label resid="Label.alignLeft"/>
+                <Supertip><Title resid="Label.alignLeft"/><Description resid="Tip.alignLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignLeft.16"/><bt:Image size="32" resid="Icon.alignLeft.32"/><bt:Image size="80" resid="Icon.alignLeft.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignLeft</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignCenter">
+                <Label resid="Label.alignCenter"/>
+                <Supertip><Title resid="Label.alignCenter"/><Description resid="Tip.alignCenter"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignCenter.16"/><bt:Image size="32" resid="Icon.alignCenter.32"/><bt:Image size="80" resid="Icon.alignCenter.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignCenter</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignRight">
+                <Label resid="Label.alignRight"/>
+                <Supertip><Title resid="Label.alignRight"/><Description resid="Tip.alignRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignRight.16"/><bt:Image size="32" resid="Icon.alignRight.32"/><bt:Image size="80" resid="Icon.alignRight.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignRight</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignTop">
+                <Label resid="Label.alignTop"/>
+                <Supertip><Title resid="Label.alignTop"/><Description resid="Tip.alignTop"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignTop.16"/><bt:Image size="32" resid="Icon.alignTop.32"/><bt:Image size="80" resid="Icon.alignTop.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignTop</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignMiddle">
+                <Label resid="Label.alignMiddle"/>
+                <Supertip><Title resid="Label.alignMiddle"/><Description resid="Tip.alignMiddle"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignMiddle.16"/><bt:Image size="32" resid="Icon.alignMiddle.32"/><bt:Image size="80" resid="Icon.alignMiddle.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignMiddle</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignBottom">
+                <Label resid="Label.alignBottom"/>
+                <Supertip><Title resid="Label.alignBottom"/><Description resid="Tip.alignBottom"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignBottom.16"/><bt:Image size="32" resid="Icon.alignBottom.32"/><bt:Image size="80" resid="Icon.alignBottom.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignBottom</FunctionName></Action>
+              </Control>
+            </Group>
+            <Group id="Group.Position">
+              <Label resid="Group.Position"/>
+              <Icon><bt:Image size="16" resid="Icon.dockMenu.16"/><bt:Image size="32" resid="Icon.dockMenu.32"/><bt:Image size="80" resid="Icon.dockMenu.80"/></Icon>
+              <Control xsi:type="Menu" id="Menu.dockMenu">
+                <Label resid="Label.dockMenu"/>
+                <Supertip><Title resid="Label.dockMenu"/><Description resid="Tip.dockMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.dockMenu.16"/><bt:Image size="32" resid="Icon.dockMenu.32"/><bt:Image size="80" resid="Icon.dockMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.dockLeft">
+                    <Label resid="Label.dockLeft"/>
+                <Supertip><Title resid="Label.dockLeft"/><Description resid="Tip.dockLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.dockLeft.16"/><bt:Image size="32" resid="Icon.dockLeft.32"/><bt:Image size="80" resid="Icon.dockLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>dockLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.dockRight">
+                    <Label resid="Label.dockRight"/>
+                <Supertip><Title resid="Label.dockRight"/><Description resid="Tip.dockRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.dockRight.16"/><bt:Image size="32" resid="Icon.dockRight.32"/><bt:Image size="80" resid="Icon.dockRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>dockRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.dockUp">
+                    <Label resid="Label.dockUp"/>
+                <Supertip><Title resid="Label.dockUp"/><Description resid="Tip.dockUp"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.dockUp.16"/><bt:Image size="32" resid="Icon.dockUp.32"/><bt:Image size="80" resid="Icon.dockUp.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>dockUp</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.dockDown">
+                    <Label resid="Label.dockDown"/>
+                <Supertip><Title resid="Label.dockDown"/><Description resid="Tip.dockDown"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.dockDown.16"/><bt:Image size="32" resid="Icon.dockDown.32"/><bt:Image size="80" resid="Icon.dockDown.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>dockDown</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Button" id="Btn.goldenCanon">
+                <Label resid="Label.goldenCanon"/>
+                <Supertip><Title resid="Label.goldenCanon"/><Description resid="Tip.goldenCanon"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.goldenCanon.16"/><bt:Image size="32" resid="Icon.goldenCanon.32"/><bt:Image size="80" resid="Icon.goldenCanon.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>goldenCanon</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.cornerMenu">
+                <Label resid="Label.cornerMenu"/>
+                <Supertip><Title resid="Label.cornerMenu"/><Description resid="Tip.cornerMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.cornerMenu.16"/><bt:Image size="32" resid="Icon.cornerMenu.32"/><bt:Image size="80" resid="Icon.cornerMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.cornerTopLeft">
+                    <Label resid="Label.cornerTopLeft"/>
+                <Supertip><Title resid="Label.cornerTopLeft"/><Description resid="Tip.cornerTopLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.cornerTopLeft.16"/><bt:Image size="32" resid="Icon.cornerTopLeft.32"/><bt:Image size="80" resid="Icon.cornerTopLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>cornerTopLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.cornerTopRight">
+                    <Label resid="Label.cornerTopRight"/>
+                <Supertip><Title resid="Label.cornerTopRight"/><Description resid="Tip.cornerTopRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.cornerTopRight.16"/><bt:Image size="32" resid="Icon.cornerTopRight.32"/><bt:Image size="80" resid="Icon.cornerTopRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>cornerTopRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.cornerBottomLeft">
+                    <Label resid="Label.cornerBottomLeft"/>
+                <Supertip><Title resid="Label.cornerBottomLeft"/><Description resid="Tip.cornerBottomLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.cornerBottomLeft.16"/><bt:Image size="32" resid="Icon.cornerBottomLeft.32"/><bt:Image size="80" resid="Icon.cornerBottomLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>cornerBottomLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.cornerBottomRight">
+                    <Label resid="Label.cornerBottomRight"/>
+                <Supertip><Title resid="Label.cornerBottomRight"/><Description resid="Tip.cornerBottomRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.cornerBottomRight.16"/><bt:Image size="32" resid="Icon.cornerBottomRight.32"/><bt:Image size="80" resid="Icon.cornerBottomRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>cornerBottomRight</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignInTable">
+                <Label resid="Label.alignInTable"/>
+                <Supertip><Title resid="Label.alignInTable"/><Description resid="Tip.alignInTable"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignInTable.16"/><bt:Image size="32" resid="Icon.alignInTable.32"/><bt:Image size="80" resid="Icon.alignInTable.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignInTable</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.savePosition">
+                <Label resid="Label.savePosition"/>
+                <Supertip><Title resid="Label.savePosition"/><Description resid="Tip.savePosition"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.savePosition.16"/><bt:Image size="32" resid="Icon.savePosition.32"/><bt:Image size="80" resid="Icon.savePosition.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>savePosition</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.applyMenu">
+                <Label resid="Label.applyMenu"/>
+                <Supertip><Title resid="Label.applyMenu"/><Description resid="Tip.applyMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyMenu.16"/><bt:Image size="32" resid="Icon.applyMenu.32"/><bt:Image size="80" resid="Icon.applyMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.applyPosition">
+                    <Label resid="Label.applyPosition"/>
+                <Supertip><Title resid="Label.applyPosition"/><Description resid="Tip.applyPosition"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyPosition.16"/><bt:Image size="32" resid="Icon.applyPosition.32"/><bt:Image size="80" resid="Icon.applyPosition.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyPosition</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyTopLeft">
+                    <Label resid="Label.applyTopLeft"/>
+                <Supertip><Title resid="Label.applyTopLeft"/><Description resid="Tip.applyTopLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyTopLeft.16"/><bt:Image size="32" resid="Icon.applyTopLeft.32"/><bt:Image size="80" resid="Icon.applyTopLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyTopLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyTopCenter">
+                    <Label resid="Label.applyTopCenter"/>
+                <Supertip><Title resid="Label.applyTopCenter"/><Description resid="Tip.applyTopCenter"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyTopCenter.16"/><bt:Image size="32" resid="Icon.applyTopCenter.32"/><bt:Image size="80" resid="Icon.applyTopCenter.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyTopCenter</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyTopRight">
+                    <Label resid="Label.applyTopRight"/>
+                <Supertip><Title resid="Label.applyTopRight"/><Description resid="Tip.applyTopRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyTopRight.16"/><bt:Image size="32" resid="Icon.applyTopRight.32"/><bt:Image size="80" resid="Icon.applyTopRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyTopRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyMiddleLeft">
+                    <Label resid="Label.applyMiddleLeft"/>
+                <Supertip><Title resid="Label.applyMiddleLeft"/><Description resid="Tip.applyMiddleLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyMiddleLeft.16"/><bt:Image size="32" resid="Icon.applyMiddleLeft.32"/><bt:Image size="80" resid="Icon.applyMiddleLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyMiddleLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyMiddleCenter">
+                    <Label resid="Label.applyMiddleCenter"/>
+                <Supertip><Title resid="Label.applyMiddleCenter"/><Description resid="Tip.applyMiddleCenter"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyMiddleCenter.16"/><bt:Image size="32" resid="Icon.applyMiddleCenter.32"/><bt:Image size="80" resid="Icon.applyMiddleCenter.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyMiddleCenter</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyMiddleRight">
+                    <Label resid="Label.applyMiddleRight"/>
+                <Supertip><Title resid="Label.applyMiddleRight"/><Description resid="Tip.applyMiddleRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyMiddleRight.16"/><bt:Image size="32" resid="Icon.applyMiddleRight.32"/><bt:Image size="80" resid="Icon.applyMiddleRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyMiddleRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyBottomLeft">
+                    <Label resid="Label.applyBottomLeft"/>
+                <Supertip><Title resid="Label.applyBottomLeft"/><Description resid="Tip.applyBottomLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyBottomLeft.16"/><bt:Image size="32" resid="Icon.applyBottomLeft.32"/><bt:Image size="80" resid="Icon.applyBottomLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyBottomLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyBottomCenter">
+                    <Label resid="Label.applyBottomCenter"/>
+                <Supertip><Title resid="Label.applyBottomCenter"/><Description resid="Tip.applyBottomCenter"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyBottomCenter.16"/><bt:Image size="32" resid="Icon.applyBottomCenter.32"/><bt:Image size="80" resid="Icon.applyBottomCenter.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyBottomCenter</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyBottomRight">
+                    <Label resid="Label.applyBottomRight"/>
+                <Supertip><Title resid="Label.applyBottomRight"/><Description resid="Tip.applyBottomRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyBottomRight.16"/><bt:Image size="32" resid="Icon.applyBottomRight.32"/><bt:Image size="80" resid="Icon.applyBottomRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyBottomRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyWidth">
+                    <Label resid="Label.applyWidth"/>
+                <Supertip><Title resid="Label.applyWidth"/><Description resid="Tip.applyWidth"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyWidth.16"/><bt:Image size="32" resid="Icon.applyWidth.32"/><bt:Image size="80" resid="Icon.applyWidth.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyWidth</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applyHeight">
+                    <Label resid="Label.applyHeight"/>
+                <Supertip><Title resid="Label.applyHeight"/><Description resid="Tip.applyHeight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applyHeight.16"/><bt:Image size="32" resid="Icon.applyHeight.32"/><bt:Image size="80" resid="Icon.applyHeight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applyHeight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.applySize">
+                    <Label resid="Label.applySize"/>
+                <Supertip><Title resid="Label.applySize"/><Description resid="Tip.applySize"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.applySize.16"/><bt:Image size="32" resid="Icon.applySize.32"/><bt:Image size="80" resid="Icon.applySize.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>applySize</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+            </Group>
+            <Group id="Group.Arrange">
+              <Label resid="Group.Arrange"/>
+              <Icon><bt:Image size="16" resid="Icon.distHMenu.16"/><bt:Image size="32" resid="Icon.distHMenu.32"/><bt:Image size="80" resid="Icon.distHMenu.80"/></Icon>
+              <Control xsi:type="Menu" id="Menu.distHMenu">
+                <Label resid="Label.distHMenu"/>
+                <Supertip><Title resid="Label.distHMenu"/><Description resid="Tip.distHMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.distHMenu.16"/><bt:Image size="32" resid="Icon.distHMenu.32"/><bt:Image size="80" resid="Icon.distHMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.distributeHorizontal">
+                    <Label resid="Label.distributeHorizontal"/>
+                <Supertip><Title resid="Label.distributeHorizontal"/><Description resid="Tip.distributeHorizontal"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.distributeHorizontal.16"/><bt:Image size="32" resid="Icon.distributeHorizontal.32"/><bt:Image size="80" resid="Icon.distributeHorizontal.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>distributeHorizontal</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.gapWiderH">
+                    <Label resid="Label.gapWiderH"/>
+                <Supertip><Title resid="Label.gapWiderH"/><Description resid="Tip.gapWiderH"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.gapWiderH.16"/><bt:Image size="32" resid="Icon.gapWiderH.32"/><bt:Image size="80" resid="Icon.gapWiderH.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>gapWiderH</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.gapNarrowerH">
+                    <Label resid="Label.gapNarrowerH"/>
+                <Supertip><Title resid="Label.gapNarrowerH"/><Description resid="Tip.gapNarrowerH"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.gapNarrowerH.16"/><bt:Image size="32" resid="Icon.gapNarrowerH.32"/><bt:Image size="80" resid="Icon.gapNarrowerH.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>gapNarrowerH</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.distVMenu">
+                <Label resid="Label.distVMenu"/>
+                <Supertip><Title resid="Label.distVMenu"/><Description resid="Tip.distVMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.distVMenu.16"/><bt:Image size="32" resid="Icon.distVMenu.32"/><bt:Image size="80" resid="Icon.distVMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.distributeVertical">
+                    <Label resid="Label.distributeVertical"/>
+                <Supertip><Title resid="Label.distributeVertical"/><Description resid="Tip.distributeVertical"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.distributeVertical.16"/><bt:Image size="32" resid="Icon.distributeVertical.32"/><bt:Image size="80" resid="Icon.distributeVertical.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>distributeVertical</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.gapTallerV">
+                    <Label resid="Label.gapTallerV"/>
+                <Supertip><Title resid="Label.gapTallerV"/><Description resid="Tip.gapTallerV"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.gapTallerV.16"/><bt:Image size="32" resid="Icon.gapTallerV.32"/><bt:Image size="80" resid="Icon.gapTallerV.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>gapTallerV</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.gapShorterV">
+                    <Label resid="Label.gapShorterV"/>
+                <Supertip><Title resid="Label.gapShorterV"/><Description resid="Tip.gapShorterV"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.gapShorterV.16"/><bt:Image size="32" resid="Icon.gapShorterV.32"/><bt:Image size="80" resid="Icon.gapShorterV.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>gapShorterV</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.matrixMenu">
+                <Label resid="Label.matrixMenu"/>
+                <Supertip><Title resid="Label.matrixMenu"/><Description resid="Tip.matrixMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.matrixMenu.16"/><bt:Image size="32" resid="Icon.matrixMenu.32"/><bt:Image size="80" resid="Icon.matrixMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.matrixPane">
+                    <Label resid="Label.matrixPane"/>
+                <Supertip><Title resid="Label.matrixPane"/><Description resid="Tip.matrixPane"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.matrixPane.16"/><bt:Image size="32" resid="Icon.matrixPane.32"/><bt:Image size="80" resid="Icon.matrixPane.80"/></Icon>
+                    <Action xsi:type="ShowTaskpane"><TaskpaneId>PptToolkit.Pane</TaskpaneId><SourceLocation resid="Taskpane.Url"/></Action>
+                  </Item>
+                  <Item id="Item.stackHorizontal">
+                    <Label resid="Label.stackHorizontal"/>
+                <Supertip><Title resid="Label.stackHorizontal"/><Description resid="Tip.stackHorizontal"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stackHorizontal.16"/><bt:Image size="32" resid="Icon.stackHorizontal.32"/><bt:Image size="80" resid="Icon.stackHorizontal.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>stackHorizontal</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.stackVertical">
+                    <Label resid="Label.stackVertical"/>
+                <Supertip><Title resid="Label.stackVertical"/><Description resid="Tip.stackVertical"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stackVertical.16"/><bt:Image size="32" resid="Icon.stackVertical.32"/><bt:Image size="80" resid="Icon.stackVertical.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>stackVertical</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.swapMenu">
+                <Label resid="Label.swapMenu"/>
+                <Supertip><Title resid="Label.swapMenu"/><Description resid="Tip.swapMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swapMenu.16"/><bt:Image size="32" resid="Icon.swapMenu.32"/><bt:Image size="80" resid="Icon.swapMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.swap">
+                    <Label resid="Label.swap"/>
+                <Supertip><Title resid="Label.swap"/><Description resid="Tip.swap"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swap.16"/><bt:Image size="32" resid="Icon.swap.32"/><bt:Image size="80" resid="Icon.swap.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>swap</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.swapHorizontal">
+                    <Label resid="Label.swapHorizontal"/>
+                <Supertip><Title resid="Label.swapHorizontal"/><Description resid="Tip.swapHorizontal"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swapHorizontal.16"/><bt:Image size="32" resid="Icon.swapHorizontal.32"/><bt:Image size="80" resid="Icon.swapHorizontal.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>swapHorizontal</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.swapVertical">
+                    <Label resid="Label.swapVertical"/>
+                <Supertip><Title resid="Label.swapVertical"/><Description resid="Tip.swapVertical"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swapVertical.16"/><bt:Image size="32" resid="Icon.swapVertical.32"/><bt:Image size="80" resid="Icon.swapVertical.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>swapVertical</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.swapCentered">
+                    <Label resid="Label.swapCentered"/>
+                <Supertip><Title resid="Label.swapCentered"/><Description resid="Tip.swapCentered"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swapCentered.16"/><bt:Image size="32" resid="Icon.swapCentered.32"/><bt:Image size="80" resid="Icon.swapCentered.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>swapCentered</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.swapHorizontalCentered">
+                    <Label resid="Label.swapHorizontalCentered"/>
+                <Supertip><Title resid="Label.swapHorizontalCentered"/><Description resid="Tip.swapHorizontalCentered"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swapHorizontalCentered.16"/><bt:Image size="32" resid="Icon.swapHorizontalCentered.32"/><bt:Image size="80" resid="Icon.swapHorizontalCentered.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>swapHorizontalCentered</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.swapVerticalCentered">
+                    <Label resid="Label.swapVerticalCentered"/>
+                <Supertip><Title resid="Label.swapVerticalCentered"/><Description resid="Tip.swapVerticalCentered"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.swapVerticalCentered.16"/><bt:Image size="32" resid="Icon.swapVerticalCentered.32"/><bt:Image size="80" resid="Icon.swapVerticalCentered.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>swapVerticalCentered</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Button" id="Btn.arrangeCircular">
+                <Label resid="Label.arrangeCircular"/>
+                <Supertip><Title resid="Label.arrangeCircular"/><Description resid="Tip.arrangeCircular"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.arrangeCircular.16"/><bt:Image size="32" resid="Icon.arrangeCircular.32"/><bt:Image size="80" resid="Icon.arrangeCircular.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>arrangeCircular</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.rotateMenu">
+                <Label resid="Label.rotateMenu"/>
+                <Supertip><Title resid="Label.rotateMenu"/><Description resid="Tip.rotateMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.rotateMenu.16"/><bt:Image size="32" resid="Icon.rotateMenu.32"/><bt:Image size="80" resid="Icon.rotateMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.rotateLeft">
+                    <Label resid="Label.rotateLeft"/>
+                <Supertip><Title resid="Label.rotateLeft"/><Description resid="Tip.rotateLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.rotateLeft.16"/><bt:Image size="32" resid="Icon.rotateLeft.32"/><bt:Image size="80" resid="Icon.rotateLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>rotateLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.rotateRight">
+                    <Label resid="Label.rotateRight"/>
+                <Supertip><Title resid="Label.rotateRight"/><Description resid="Tip.rotateRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.rotateRight.16"/><bt:Image size="32" resid="Icon.rotateRight.32"/><bt:Image size="80" resid="Icon.rotateRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>rotateRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.rotateMatch">
+                    <Label resid="Label.rotateMatch"/>
+                <Supertip><Title resid="Label.rotateMatch"/><Description resid="Tip.rotateMatch"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.rotateMatch.16"/><bt:Image size="32" resid="Icon.rotateMatch.32"/><bt:Image size="80" resid="Icon.rotateMatch.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>rotateMatch</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.selectMenu">
+                <Label resid="Label.selectMenu"/>
+                <Supertip><Title resid="Label.selectMenu"/><Description resid="Tip.selectMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.selectMenu.16"/><bt:Image size="32" resid="Icon.selectMenu.32"/><bt:Image size="80" resid="Icon.selectMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.selectSameType">
+                    <Label resid="Label.selectSameType"/>
+                <Supertip><Title resid="Label.selectSameType"/><Description resid="Tip.selectSameType"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.selectSameType.16"/><bt:Image size="32" resid="Icon.selectSameType.32"/><bt:Image size="80" resid="Icon.selectSameType.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>selectSameType</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.selectSameFill">
+                    <Label resid="Label.selectSameFill"/>
+                <Supertip><Title resid="Label.selectSameFill"/><Description resid="Tip.selectSameFill"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.selectSameFill.16"/><bt:Image size="32" resid="Icon.selectSameFill.32"/><bt:Image size="80" resid="Icon.selectSameFill.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>selectSameFill</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.selectSameSize">
+                    <Label resid="Label.selectSameSize"/>
+                <Supertip><Title resid="Label.selectSameSize"/><Description resid="Tip.selectSameSize"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.selectSameSize.16"/><bt:Image size="32" resid="Icon.selectSameSize.32"/><bt:Image size="80" resid="Icon.selectSameSize.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>selectSameSize</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+            </Group>
+            <Group id="Group.Size">
+              <Label resid="Group.Size"/>
+              <Icon><bt:Image size="16" resid="Icon.widthMenu.16"/><bt:Image size="32" resid="Icon.widthMenu.32"/><bt:Image size="80" resid="Icon.widthMenu.80"/></Icon>
+              <Control xsi:type="Menu" id="Menu.widthMenu">
+                <Label resid="Label.widthMenu"/>
+                <Supertip><Title resid="Label.widthMenu"/><Description resid="Tip.widthMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.widthMenu.16"/><bt:Image size="32" resid="Icon.widthMenu.32"/><bt:Image size="80" resid="Icon.widthMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.sameWidth">
+                    <Label resid="Label.sameWidth"/>
+                <Supertip><Title resid="Label.sameWidth"/><Description resid="Tip.sameWidth"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.sameWidth.16"/><bt:Image size="32" resid="Icon.sameWidth.32"/><bt:Image size="80" resid="Icon.sameWidth.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>sameWidth</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.widthUp">
+                    <Label resid="Label.widthUp"/>
+                <Supertip><Title resid="Label.widthUp"/><Description resid="Tip.widthUp"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.widthUp.16"/><bt:Image size="32" resid="Icon.widthUp.32"/><bt:Image size="80" resid="Icon.widthUp.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>widthUp</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.widthDown">
+                    <Label resid="Label.widthDown"/>
+                <Supertip><Title resid="Label.widthDown"/><Description resid="Tip.widthDown"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.widthDown.16"/><bt:Image size="32" resid="Icon.widthDown.32"/><bt:Image size="80" resid="Icon.widthDown.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>widthDown</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.heightMenu">
+                <Label resid="Label.heightMenu"/>
+                <Supertip><Title resid="Label.heightMenu"/><Description resid="Tip.heightMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.heightMenu.16"/><bt:Image size="32" resid="Icon.heightMenu.32"/><bt:Image size="80" resid="Icon.heightMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.sameHeight">
+                    <Label resid="Label.sameHeight"/>
+                <Supertip><Title resid="Label.sameHeight"/><Description resid="Tip.sameHeight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.sameHeight.16"/><bt:Image size="32" resid="Icon.sameHeight.32"/><bt:Image size="80" resid="Icon.sameHeight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>sameHeight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.heightUp">
+                    <Label resid="Label.heightUp"/>
+                <Supertip><Title resid="Label.heightUp"/><Description resid="Tip.heightUp"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.heightUp.16"/><bt:Image size="32" resid="Icon.heightUp.32"/><bt:Image size="80" resid="Icon.heightUp.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>heightUp</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.heightDown">
+                    <Label resid="Label.heightDown"/>
+                <Supertip><Title resid="Label.heightDown"/><Description resid="Tip.heightDown"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.heightDown.16"/><bt:Image size="32" resid="Icon.heightDown.32"/><bt:Image size="80" resid="Icon.heightDown.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>heightDown</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Button" id="Btn.sameSize">
+                <Label resid="Label.sameSize"/>
+                <Supertip><Title resid="Label.sameSize"/><Description resid="Tip.sameSize"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.sameSize.16"/><bt:Image size="32" resid="Icon.sameSize.32"/><bt:Image size="80" resid="Icon.sameSize.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>sameSize</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.stretchMenu">
+                <Label resid="Label.stretchMenu"/>
+                <Supertip><Title resid="Label.stretchMenu"/><Description resid="Tip.stretchMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stretchMenu.16"/><bt:Image size="32" resid="Icon.stretchMenu.32"/><bt:Image size="80" resid="Icon.stretchMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.stretchLeft">
+                    <Label resid="Label.stretchLeft"/>
+                <Supertip><Title resid="Label.stretchLeft"/><Description resid="Tip.stretchLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stretchLeft.16"/><bt:Image size="32" resid="Icon.stretchLeft.32"/><bt:Image size="80" resid="Icon.stretchLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>stretchLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.stretchRight">
+                    <Label resid="Label.stretchRight"/>
+                <Supertip><Title resid="Label.stretchRight"/><Description resid="Tip.stretchRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stretchRight.16"/><bt:Image size="32" resid="Icon.stretchRight.32"/><bt:Image size="80" resid="Icon.stretchRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>stretchRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.stretchUp">
+                    <Label resid="Label.stretchUp"/>
+                <Supertip><Title resid="Label.stretchUp"/><Description resid="Tip.stretchUp"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stretchUp.16"/><bt:Image size="32" resid="Icon.stretchUp.32"/><bt:Image size="80" resid="Icon.stretchUp.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>stretchUp</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.stretchDown">
+                    <Label resid="Label.stretchDown"/>
+                <Supertip><Title resid="Label.stretchDown"/><Description resid="Tip.stretchDown"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.stretchDown.16"/><bt:Image size="32" resid="Icon.stretchDown.32"/><bt:Image size="80" resid="Icon.stretchDown.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>stretchDown</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Menu" id="Menu.fillMenu">
+                <Label resid="Label.fillMenu"/>
+                <Supertip><Title resid="Label.fillMenu"/><Description resid="Tip.fillMenu"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.fillMenu.16"/><bt:Image size="32" resid="Icon.fillMenu.32"/><bt:Image size="80" resid="Icon.fillMenu.80"/></Icon>
+                <Items>
+                  <Item id="Item.fillLeft">
+                    <Label resid="Label.fillLeft"/>
+                <Supertip><Title resid="Label.fillLeft"/><Description resid="Tip.fillLeft"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.fillLeft.16"/><bt:Image size="32" resid="Icon.fillLeft.32"/><bt:Image size="80" resid="Icon.fillLeft.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>fillLeft</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.fillRight">
+                    <Label resid="Label.fillRight"/>
+                <Supertip><Title resid="Label.fillRight"/><Description resid="Tip.fillRight"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.fillRight.16"/><bt:Image size="32" resid="Icon.fillRight.32"/><bt:Image size="80" resid="Icon.fillRight.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>fillRight</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.fillUp">
+                    <Label resid="Label.fillUp"/>
+                <Supertip><Title resid="Label.fillUp"/><Description resid="Tip.fillUp"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.fillUp.16"/><bt:Image size="32" resid="Icon.fillUp.32"/><bt:Image size="80" resid="Icon.fillUp.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>fillUp</FunctionName></Action>
+                  </Item>
+                  <Item id="Item.fillDown">
+                    <Label resid="Label.fillDown"/>
+                <Supertip><Title resid="Label.fillDown"/><Description resid="Tip.fillDown"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.fillDown.16"/><bt:Image size="32" resid="Icon.fillDown.32"/><bt:Image size="80" resid="Icon.fillDown.80"/></Icon>
+                    <Action xsi:type="ExecuteFunction"><FunctionName>fillDown</FunctionName></Action>
+                  </Item>
+                </Items>
+              </Control>
+              <Control xsi:type="Button" id="Btn.resizerPane">
+                <Label resid="Label.resizerPane"/>
+                <Supertip><Title resid="Label.resizerPane"/><Description resid="Tip.resizerPane"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.resizerPane.16"/><bt:Image size="32" resid="Icon.resizerPane.32"/><bt:Image size="80" resid="Icon.resizerPane.80"/></Icon>
+                <Action xsi:type="ShowTaskpane"><TaskpaneId>PptToolkit.Pane</TaskpaneId><SourceLocation resid="Taskpane.Url"/></Action>
+              </Control>
+            </Group>
+            <Group id="Group.Charts">
+              <Label resid="Group.Charts"/>
+              <Icon><bt:Image size="16" resid="Icon.elementsPane.16"/><bt:Image size="32" resid="Icon.elementsPane.32"/><bt:Image size="80" resid="Icon.elementsPane.80"/></Icon>
+              <Control xsi:type="Button" id="Btn.elementsPane">
+                <Label resid="Label.elementsPane"/>
+                <Supertip><Title resid="Label.elementsPane"/><Description resid="Tip.elementsPane"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.elementsPane.16"/><bt:Image size="32" resid="Icon.elementsPane.32"/><bt:Image size="80" resid="Icon.elementsPane.80"/></Icon>
+                <Action xsi:type="ShowTaskpane"><TaskpaneId>PptToolkit.Pane</TaskpaneId><SourceLocation resid="Taskpane.Url"/></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.alignRadius">
+                <Label resid="Label.alignRadius"/>
+                <Supertip><Title resid="Label.alignRadius"/><Description resid="Tip.alignRadius"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.alignRadius.16"/><bt:Image size="32" resid="Icon.alignRadius.32"/><bt:Image size="80" resid="Icon.alignRadius.80"/></Icon>
+                <Action xsi:type="ExecuteFunction"><FunctionName>alignRadius</FunctionName></Action>
+              </Control>
+              <Control xsi:type="Button" id="Btn.chartPane">
+                <Label resid="Label.chartPane"/>
+                <Supertip><Title resid="Label.chartPane"/><Description resid="Tip.chartPane"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.chartPane.16"/><bt:Image size="32" resid="Icon.chartPane.32"/><bt:Image size="80" resid="Icon.chartPane.80"/></Icon>
+                <Action xsi:type="ShowTaskpane"><TaskpaneId>PptToolkit.Pane</TaskpaneId><SourceLocation resid="Taskpane.Url"/></Action>
+              </Control>
+            </Group>
+            <Group id="Group.More">
+              <Label resid="Group.More"/>
+              <Icon><bt:Image size="16" resid="Icon.tools.16"/><bt:Image size="32" resid="Icon.tools.32"/><bt:Image size="80" resid="Icon.tools.80"/></Icon>
+              <Control xsi:type="Button" id="Btn.tools">
+                <Label resid="Label.tools"/>
+                <Supertip><Title resid="Label.tools"/><Description resid="Tip.tools"/></Supertip>
+                <Icon><bt:Image size="16" resid="Icon.tools.16"/><bt:Image size="32" resid="Icon.tools.32"/><bt:Image size="80" resid="Icon.tools.80"/></Icon>
+                <Action xsi:type="ShowTaskpane"><TaskpaneId>PptToolkit.Pane</TaskpaneId><SourceLocation resid="Taskpane.Url"/></Action>
+              </Control>
+            </Group>
+              <Label resid="Tab.Label"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.alignLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignLeft-16.png"/>
+        <bt:Image id="Icon.alignLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignLeft-32.png"/>
+        <bt:Image id="Icon.alignLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignLeft-80.png"/>
+        <bt:Image id="Icon.alignCenter.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignCenter-16.png"/>
+        <bt:Image id="Icon.alignCenter.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignCenter-32.png"/>
+        <bt:Image id="Icon.alignCenter.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignCenter-80.png"/>
+        <bt:Image id="Icon.alignRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignRight-16.png"/>
+        <bt:Image id="Icon.alignRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignRight-32.png"/>
+        <bt:Image id="Icon.alignRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignRight-80.png"/>
+        <bt:Image id="Icon.alignTop.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignTop-16.png"/>
+        <bt:Image id="Icon.alignTop.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignTop-32.png"/>
+        <bt:Image id="Icon.alignTop.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignTop-80.png"/>
+        <bt:Image id="Icon.alignMiddle.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignMiddle-16.png"/>
+        <bt:Image id="Icon.alignMiddle.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignMiddle-32.png"/>
+        <bt:Image id="Icon.alignMiddle.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignMiddle-80.png"/>
+        <bt:Image id="Icon.alignBottom.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignBottom-16.png"/>
+        <bt:Image id="Icon.alignBottom.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignBottom-32.png"/>
+        <bt:Image id="Icon.alignBottom.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignBottom-80.png"/>
+        <bt:Image id="Icon.dockMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockMenu-16.png"/>
+        <bt:Image id="Icon.dockMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockMenu-32.png"/>
+        <bt:Image id="Icon.dockMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockMenu-80.png"/>
+        <bt:Image id="Icon.dockLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockLeft-16.png"/>
+        <bt:Image id="Icon.dockLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockLeft-32.png"/>
+        <bt:Image id="Icon.dockLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockLeft-80.png"/>
+        <bt:Image id="Icon.dockRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockRight-16.png"/>
+        <bt:Image id="Icon.dockRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockRight-32.png"/>
+        <bt:Image id="Icon.dockRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockRight-80.png"/>
+        <bt:Image id="Icon.dockUp.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockUp-16.png"/>
+        <bt:Image id="Icon.dockUp.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockUp-32.png"/>
+        <bt:Image id="Icon.dockUp.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockUp-80.png"/>
+        <bt:Image id="Icon.dockDown.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockDown-16.png"/>
+        <bt:Image id="Icon.dockDown.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockDown-32.png"/>
+        <bt:Image id="Icon.dockDown.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/dockDown-80.png"/>
+        <bt:Image id="Icon.goldenCanon.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/goldenCanon-16.png"/>
+        <bt:Image id="Icon.goldenCanon.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/goldenCanon-32.png"/>
+        <bt:Image id="Icon.goldenCanon.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/goldenCanon-80.png"/>
+        <bt:Image id="Icon.cornerMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerMenu-16.png"/>
+        <bt:Image id="Icon.cornerMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerMenu-32.png"/>
+        <bt:Image id="Icon.cornerMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerMenu-80.png"/>
+        <bt:Image id="Icon.cornerTopLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerTopLeft-16.png"/>
+        <bt:Image id="Icon.cornerTopLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerTopLeft-32.png"/>
+        <bt:Image id="Icon.cornerTopLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerTopLeft-80.png"/>
+        <bt:Image id="Icon.cornerTopRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerTopRight-16.png"/>
+        <bt:Image id="Icon.cornerTopRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerTopRight-32.png"/>
+        <bt:Image id="Icon.cornerTopRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerTopRight-80.png"/>
+        <bt:Image id="Icon.cornerBottomLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerBottomLeft-16.png"/>
+        <bt:Image id="Icon.cornerBottomLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerBottomLeft-32.png"/>
+        <bt:Image id="Icon.cornerBottomLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerBottomLeft-80.png"/>
+        <bt:Image id="Icon.cornerBottomRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerBottomRight-16.png"/>
+        <bt:Image id="Icon.cornerBottomRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerBottomRight-32.png"/>
+        <bt:Image id="Icon.cornerBottomRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/cornerBottomRight-80.png"/>
+        <bt:Image id="Icon.alignInTable.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignInTable-16.png"/>
+        <bt:Image id="Icon.alignInTable.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignInTable-32.png"/>
+        <bt:Image id="Icon.alignInTable.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignInTable-80.png"/>
+        <bt:Image id="Icon.savePosition.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/savePosition-16.png"/>
+        <bt:Image id="Icon.savePosition.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/savePosition-32.png"/>
+        <bt:Image id="Icon.savePosition.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/savePosition-80.png"/>
+        <bt:Image id="Icon.applyMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMenu-16.png"/>
+        <bt:Image id="Icon.applyMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMenu-32.png"/>
+        <bt:Image id="Icon.applyMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMenu-80.png"/>
+        <bt:Image id="Icon.applyPosition.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyPosition-16.png"/>
+        <bt:Image id="Icon.applyPosition.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyPosition-32.png"/>
+        <bt:Image id="Icon.applyPosition.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyPosition-80.png"/>
+        <bt:Image id="Icon.applyTopLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopLeft-16.png"/>
+        <bt:Image id="Icon.applyTopLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopLeft-32.png"/>
+        <bt:Image id="Icon.applyTopLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopLeft-80.png"/>
+        <bt:Image id="Icon.applyTopCenter.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopCenter-16.png"/>
+        <bt:Image id="Icon.applyTopCenter.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopCenter-32.png"/>
+        <bt:Image id="Icon.applyTopCenter.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopCenter-80.png"/>
+        <bt:Image id="Icon.applyTopRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopRight-16.png"/>
+        <bt:Image id="Icon.applyTopRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopRight-32.png"/>
+        <bt:Image id="Icon.applyTopRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyTopRight-80.png"/>
+        <bt:Image id="Icon.applyMiddleLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleLeft-16.png"/>
+        <bt:Image id="Icon.applyMiddleLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleLeft-32.png"/>
+        <bt:Image id="Icon.applyMiddleLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleLeft-80.png"/>
+        <bt:Image id="Icon.applyMiddleCenter.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleCenter-16.png"/>
+        <bt:Image id="Icon.applyMiddleCenter.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleCenter-32.png"/>
+        <bt:Image id="Icon.applyMiddleCenter.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleCenter-80.png"/>
+        <bt:Image id="Icon.applyMiddleRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleRight-16.png"/>
+        <bt:Image id="Icon.applyMiddleRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleRight-32.png"/>
+        <bt:Image id="Icon.applyMiddleRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyMiddleRight-80.png"/>
+        <bt:Image id="Icon.applyBottomLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomLeft-16.png"/>
+        <bt:Image id="Icon.applyBottomLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomLeft-32.png"/>
+        <bt:Image id="Icon.applyBottomLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomLeft-80.png"/>
+        <bt:Image id="Icon.applyBottomCenter.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomCenter-16.png"/>
+        <bt:Image id="Icon.applyBottomCenter.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomCenter-32.png"/>
+        <bt:Image id="Icon.applyBottomCenter.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomCenter-80.png"/>
+        <bt:Image id="Icon.applyBottomRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomRight-16.png"/>
+        <bt:Image id="Icon.applyBottomRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomRight-32.png"/>
+        <bt:Image id="Icon.applyBottomRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyBottomRight-80.png"/>
+        <bt:Image id="Icon.applyWidth.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyWidth-16.png"/>
+        <bt:Image id="Icon.applyWidth.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyWidth-32.png"/>
+        <bt:Image id="Icon.applyWidth.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyWidth-80.png"/>
+        <bt:Image id="Icon.applyHeight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyHeight-16.png"/>
+        <bt:Image id="Icon.applyHeight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyHeight-32.png"/>
+        <bt:Image id="Icon.applyHeight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applyHeight-80.png"/>
+        <bt:Image id="Icon.applySize.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applySize-16.png"/>
+        <bt:Image id="Icon.applySize.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applySize-32.png"/>
+        <bt:Image id="Icon.applySize.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/applySize-80.png"/>
+        <bt:Image id="Icon.distHMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distHMenu-16.png"/>
+        <bt:Image id="Icon.distHMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distHMenu-32.png"/>
+        <bt:Image id="Icon.distHMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distHMenu-80.png"/>
+        <bt:Image id="Icon.distributeHorizontal.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distributeHorizontal-16.png"/>
+        <bt:Image id="Icon.distributeHorizontal.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distributeHorizontal-32.png"/>
+        <bt:Image id="Icon.distributeHorizontal.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distributeHorizontal-80.png"/>
+        <bt:Image id="Icon.gapWiderH.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapWiderH-16.png"/>
+        <bt:Image id="Icon.gapWiderH.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapWiderH-32.png"/>
+        <bt:Image id="Icon.gapWiderH.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapWiderH-80.png"/>
+        <bt:Image id="Icon.gapNarrowerH.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapNarrowerH-16.png"/>
+        <bt:Image id="Icon.gapNarrowerH.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapNarrowerH-32.png"/>
+        <bt:Image id="Icon.gapNarrowerH.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapNarrowerH-80.png"/>
+        <bt:Image id="Icon.distVMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distVMenu-16.png"/>
+        <bt:Image id="Icon.distVMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distVMenu-32.png"/>
+        <bt:Image id="Icon.distVMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distVMenu-80.png"/>
+        <bt:Image id="Icon.distributeVertical.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distributeVertical-16.png"/>
+        <bt:Image id="Icon.distributeVertical.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distributeVertical-32.png"/>
+        <bt:Image id="Icon.distributeVertical.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/distributeVertical-80.png"/>
+        <bt:Image id="Icon.gapTallerV.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapTallerV-16.png"/>
+        <bt:Image id="Icon.gapTallerV.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapTallerV-32.png"/>
+        <bt:Image id="Icon.gapTallerV.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapTallerV-80.png"/>
+        <bt:Image id="Icon.gapShorterV.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapShorterV-16.png"/>
+        <bt:Image id="Icon.gapShorterV.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapShorterV-32.png"/>
+        <bt:Image id="Icon.gapShorterV.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/gapShorterV-80.png"/>
+        <bt:Image id="Icon.matrixMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/matrixMenu-16.png"/>
+        <bt:Image id="Icon.matrixMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/matrixMenu-32.png"/>
+        <bt:Image id="Icon.matrixMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/matrixMenu-80.png"/>
+        <bt:Image id="Icon.matrixPane.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/matrixPane-16.png"/>
+        <bt:Image id="Icon.matrixPane.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/matrixPane-32.png"/>
+        <bt:Image id="Icon.matrixPane.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/matrixPane-80.png"/>
+        <bt:Image id="Icon.stackHorizontal.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stackHorizontal-16.png"/>
+        <bt:Image id="Icon.stackHorizontal.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stackHorizontal-32.png"/>
+        <bt:Image id="Icon.stackHorizontal.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stackHorizontal-80.png"/>
+        <bt:Image id="Icon.stackVertical.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stackVertical-16.png"/>
+        <bt:Image id="Icon.stackVertical.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stackVertical-32.png"/>
+        <bt:Image id="Icon.stackVertical.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stackVertical-80.png"/>
+        <bt:Image id="Icon.swapMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapMenu-16.png"/>
+        <bt:Image id="Icon.swapMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapMenu-32.png"/>
+        <bt:Image id="Icon.swapMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapMenu-80.png"/>
+        <bt:Image id="Icon.swap.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swap-16.png"/>
+        <bt:Image id="Icon.swap.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swap-32.png"/>
+        <bt:Image id="Icon.swap.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swap-80.png"/>
+        <bt:Image id="Icon.swapHorizontal.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapHorizontal-16.png"/>
+        <bt:Image id="Icon.swapHorizontal.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapHorizontal-32.png"/>
+        <bt:Image id="Icon.swapHorizontal.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapHorizontal-80.png"/>
+        <bt:Image id="Icon.swapVertical.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapVertical-16.png"/>
+        <bt:Image id="Icon.swapVertical.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapVertical-32.png"/>
+        <bt:Image id="Icon.swapVertical.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapVertical-80.png"/>
+        <bt:Image id="Icon.swapCentered.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapCentered-16.png"/>
+        <bt:Image id="Icon.swapCentered.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapCentered-32.png"/>
+        <bt:Image id="Icon.swapCentered.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapCentered-80.png"/>
+        <bt:Image id="Icon.swapHorizontalCentered.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapHorizontalCentered-16.png"/>
+        <bt:Image id="Icon.swapHorizontalCentered.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapHorizontalCentered-32.png"/>
+        <bt:Image id="Icon.swapHorizontalCentered.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapHorizontalCentered-80.png"/>
+        <bt:Image id="Icon.swapVerticalCentered.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapVerticalCentered-16.png"/>
+        <bt:Image id="Icon.swapVerticalCentered.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapVerticalCentered-32.png"/>
+        <bt:Image id="Icon.swapVerticalCentered.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/swapVerticalCentered-80.png"/>
+        <bt:Image id="Icon.arrangeCircular.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/arrangeCircular-16.png"/>
+        <bt:Image id="Icon.arrangeCircular.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/arrangeCircular-32.png"/>
+        <bt:Image id="Icon.arrangeCircular.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/arrangeCircular-80.png"/>
+        <bt:Image id="Icon.rotateMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateMenu-16.png"/>
+        <bt:Image id="Icon.rotateMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateMenu-32.png"/>
+        <bt:Image id="Icon.rotateMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateMenu-80.png"/>
+        <bt:Image id="Icon.rotateLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateLeft-16.png"/>
+        <bt:Image id="Icon.rotateLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateLeft-32.png"/>
+        <bt:Image id="Icon.rotateLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateLeft-80.png"/>
+        <bt:Image id="Icon.rotateRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateRight-16.png"/>
+        <bt:Image id="Icon.rotateRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateRight-32.png"/>
+        <bt:Image id="Icon.rotateRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateRight-80.png"/>
+        <bt:Image id="Icon.rotateMatch.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateMatch-16.png"/>
+        <bt:Image id="Icon.rotateMatch.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateMatch-32.png"/>
+        <bt:Image id="Icon.rotateMatch.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/rotateMatch-80.png"/>
+        <bt:Image id="Icon.selectMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectMenu-16.png"/>
+        <bt:Image id="Icon.selectMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectMenu-32.png"/>
+        <bt:Image id="Icon.selectMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectMenu-80.png"/>
+        <bt:Image id="Icon.selectSameType.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameType-16.png"/>
+        <bt:Image id="Icon.selectSameType.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameType-32.png"/>
+        <bt:Image id="Icon.selectSameType.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameType-80.png"/>
+        <bt:Image id="Icon.selectSameFill.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameFill-16.png"/>
+        <bt:Image id="Icon.selectSameFill.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameFill-32.png"/>
+        <bt:Image id="Icon.selectSameFill.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameFill-80.png"/>
+        <bt:Image id="Icon.selectSameSize.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameSize-16.png"/>
+        <bt:Image id="Icon.selectSameSize.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameSize-32.png"/>
+        <bt:Image id="Icon.selectSameSize.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/selectSameSize-80.png"/>
+        <bt:Image id="Icon.widthMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthMenu-16.png"/>
+        <bt:Image id="Icon.widthMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthMenu-32.png"/>
+        <bt:Image id="Icon.widthMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthMenu-80.png"/>
+        <bt:Image id="Icon.sameWidth.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameWidth-16.png"/>
+        <bt:Image id="Icon.sameWidth.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameWidth-32.png"/>
+        <bt:Image id="Icon.sameWidth.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameWidth-80.png"/>
+        <bt:Image id="Icon.widthUp.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthUp-16.png"/>
+        <bt:Image id="Icon.widthUp.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthUp-32.png"/>
+        <bt:Image id="Icon.widthUp.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthUp-80.png"/>
+        <bt:Image id="Icon.widthDown.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthDown-16.png"/>
+        <bt:Image id="Icon.widthDown.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthDown-32.png"/>
+        <bt:Image id="Icon.widthDown.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/widthDown-80.png"/>
+        <bt:Image id="Icon.heightMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightMenu-16.png"/>
+        <bt:Image id="Icon.heightMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightMenu-32.png"/>
+        <bt:Image id="Icon.heightMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightMenu-80.png"/>
+        <bt:Image id="Icon.sameHeight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameHeight-16.png"/>
+        <bt:Image id="Icon.sameHeight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameHeight-32.png"/>
+        <bt:Image id="Icon.sameHeight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameHeight-80.png"/>
+        <bt:Image id="Icon.heightUp.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightUp-16.png"/>
+        <bt:Image id="Icon.heightUp.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightUp-32.png"/>
+        <bt:Image id="Icon.heightUp.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightUp-80.png"/>
+        <bt:Image id="Icon.heightDown.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightDown-16.png"/>
+        <bt:Image id="Icon.heightDown.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightDown-32.png"/>
+        <bt:Image id="Icon.heightDown.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/heightDown-80.png"/>
+        <bt:Image id="Icon.sameSize.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameSize-16.png"/>
+        <bt:Image id="Icon.sameSize.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameSize-32.png"/>
+        <bt:Image id="Icon.sameSize.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/sameSize-80.png"/>
+        <bt:Image id="Icon.stretchMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchMenu-16.png"/>
+        <bt:Image id="Icon.stretchMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchMenu-32.png"/>
+        <bt:Image id="Icon.stretchMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchMenu-80.png"/>
+        <bt:Image id="Icon.stretchLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchLeft-16.png"/>
+        <bt:Image id="Icon.stretchLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchLeft-32.png"/>
+        <bt:Image id="Icon.stretchLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchLeft-80.png"/>
+        <bt:Image id="Icon.stretchRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchRight-16.png"/>
+        <bt:Image id="Icon.stretchRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchRight-32.png"/>
+        <bt:Image id="Icon.stretchRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchRight-80.png"/>
+        <bt:Image id="Icon.stretchUp.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchUp-16.png"/>
+        <bt:Image id="Icon.stretchUp.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchUp-32.png"/>
+        <bt:Image id="Icon.stretchUp.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchUp-80.png"/>
+        <bt:Image id="Icon.stretchDown.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchDown-16.png"/>
+        <bt:Image id="Icon.stretchDown.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchDown-32.png"/>
+        <bt:Image id="Icon.stretchDown.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/stretchDown-80.png"/>
+        <bt:Image id="Icon.fillMenu.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillMenu-16.png"/>
+        <bt:Image id="Icon.fillMenu.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillMenu-32.png"/>
+        <bt:Image id="Icon.fillMenu.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillMenu-80.png"/>
+        <bt:Image id="Icon.fillLeft.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillLeft-16.png"/>
+        <bt:Image id="Icon.fillLeft.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillLeft-32.png"/>
+        <bt:Image id="Icon.fillLeft.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillLeft-80.png"/>
+        <bt:Image id="Icon.fillRight.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillRight-16.png"/>
+        <bt:Image id="Icon.fillRight.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillRight-32.png"/>
+        <bt:Image id="Icon.fillRight.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillRight-80.png"/>
+        <bt:Image id="Icon.fillUp.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillUp-16.png"/>
+        <bt:Image id="Icon.fillUp.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillUp-32.png"/>
+        <bt:Image id="Icon.fillUp.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillUp-80.png"/>
+        <bt:Image id="Icon.fillDown.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillDown-16.png"/>
+        <bt:Image id="Icon.fillDown.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillDown-32.png"/>
+        <bt:Image id="Icon.fillDown.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/fillDown-80.png"/>
+        <bt:Image id="Icon.resizerPane.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/resizerPane-16.png"/>
+        <bt:Image id="Icon.resizerPane.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/resizerPane-32.png"/>
+        <bt:Image id="Icon.resizerPane.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/resizerPane-80.png"/>
+        <bt:Image id="Icon.elementsPane.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/elementsPane-16.png"/>
+        <bt:Image id="Icon.elementsPane.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/elementsPane-32.png"/>
+        <bt:Image id="Icon.elementsPane.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/elementsPane-80.png"/>
+        <bt:Image id="Icon.alignRadius.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignRadius-16.png"/>
+        <bt:Image id="Icon.alignRadius.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignRadius-32.png"/>
+        <bt:Image id="Icon.alignRadius.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/alignRadius-80.png"/>
+        <bt:Image id="Icon.chartPane.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/chartPane-16.png"/>
+        <bt:Image id="Icon.chartPane.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/chartPane-32.png"/>
+        <bt:Image id="Icon.chartPane.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/chartPane-80.png"/>
+        <bt:Image id="Icon.tools.16" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/tools-16.png"/>
+        <bt:Image id="Icon.tools.32" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/tools-32.png"/>
+        <bt:Image id="Icon.tools.80" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/assets/tools-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Commands.Url" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://dtribek.github.io/ppt-toolkit-site/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Tab.Label" DefaultValue="PPT Toolkit"/>
+        <bt:String id="Group.Align" DefaultValue="Align"/>
+        <bt:String id="Group.Position" DefaultValue="Position"/>
+        <bt:String id="Group.Arrange" DefaultValue="Arrange"/>
+        <bt:String id="Group.Size" DefaultValue="Size"/>
+        <bt:String id="Group.Charts" DefaultValue="Charts"/>
+        <bt:String id="Group.More" DefaultValue="More"/>
+        <bt:String id="Label.alignLeft" DefaultValue="Left"/>
+        <bt:String id="Label.alignCenter" DefaultValue="Center"/>
+        <bt:String id="Label.alignRight" DefaultValue="Right"/>
+        <bt:String id="Label.alignTop" DefaultValue="Top"/>
+        <bt:String id="Label.alignMiddle" DefaultValue="Middle"/>
+        <bt:String id="Label.alignBottom" DefaultValue="Bottom"/>
+        <bt:String id="Label.dockMenu" DefaultValue="Dock"/>
+        <bt:String id="Label.dockLeft" DefaultValue="Dock Left"/>
+        <bt:String id="Label.dockRight" DefaultValue="Dock Right"/>
+        <bt:String id="Label.dockUp" DefaultValue="Dock Up"/>
+        <bt:String id="Label.dockDown" DefaultValue="Dock Down"/>
+        <bt:String id="Label.goldenCanon" DefaultValue="Golden Canon"/>
+        <bt:String id="Label.cornerMenu" DefaultValue="Corner"/>
+        <bt:String id="Label.cornerTopLeft" DefaultValue="Top Left Corner"/>
+        <bt:String id="Label.cornerTopRight" DefaultValue="Top Right Corner"/>
+        <bt:String id="Label.cornerBottomLeft" DefaultValue="Bottom Left Corner"/>
+        <bt:String id="Label.cornerBottomRight" DefaultValue="Bottom Right Corner"/>
+        <bt:String id="Label.alignInTable" DefaultValue="In Table"/>
+        <bt:String id="Label.savePosition" DefaultValue="Save Position"/>
+        <bt:String id="Label.applyMenu" DefaultValue="Apply Position"/>
+        <bt:String id="Label.applyPosition" DefaultValue="Position and Size"/>
+        <bt:String id="Label.applyTopLeft" DefaultValue="Top Left"/>
+        <bt:String id="Label.applyTopCenter" DefaultValue="Top Center"/>
+        <bt:String id="Label.applyTopRight" DefaultValue="Top Right"/>
+        <bt:String id="Label.applyMiddleLeft" DefaultValue="Middle Left"/>
+        <bt:String id="Label.applyMiddleCenter" DefaultValue="Middle Center"/>
+        <bt:String id="Label.applyMiddleRight" DefaultValue="Middle Right"/>
+        <bt:String id="Label.applyBottomLeft" DefaultValue="Bottom Left"/>
+        <bt:String id="Label.applyBottomCenter" DefaultValue="Bottom Center"/>
+        <bt:String id="Label.applyBottomRight" DefaultValue="Bottom Right"/>
+        <bt:String id="Label.applyWidth" DefaultValue="Width"/>
+        <bt:String id="Label.applyHeight" DefaultValue="Height"/>
+        <bt:String id="Label.applySize" DefaultValue="Width and Height"/>
+        <bt:String id="Label.distHMenu" DefaultValue="Distribute Across"/>
+        <bt:String id="Label.distributeHorizontal" DefaultValue="Distribute Horizontally"/>
+        <bt:String id="Label.gapWiderH" DefaultValue="Increase Gap"/>
+        <bt:String id="Label.gapNarrowerH" DefaultValue="Decrease Gap"/>
+        <bt:String id="Label.distVMenu" DefaultValue="Distribute Down"/>
+        <bt:String id="Label.distributeVertical" DefaultValue="Distribute Vertically"/>
+        <bt:String id="Label.gapTallerV" DefaultValue="Increase Gap"/>
+        <bt:String id="Label.gapShorterV" DefaultValue="Decrease Gap"/>
+        <bt:String id="Label.matrixMenu" DefaultValue="Matrix"/>
+        <bt:String id="Label.matrixPane" DefaultValue="Align in Matrix…"/>
+        <bt:String id="Label.stackHorizontal" DefaultValue="Stack Horizontally"/>
+        <bt:String id="Label.stackVertical" DefaultValue="Stack Vertically"/>
+        <bt:String id="Label.swapMenu" DefaultValue="Swap"/>
+        <bt:String id="Label.swap" DefaultValue="Swap"/>
+        <bt:String id="Label.swapHorizontal" DefaultValue="Swap Horizontally"/>
+        <bt:String id="Label.swapVertical" DefaultValue="Swap Vertically"/>
+        <bt:String id="Label.swapCentered" DefaultValue="Swap Centered"/>
+        <bt:String id="Label.swapHorizontalCentered" DefaultValue="Swap Horizontally Centered"/>
+        <bt:String id="Label.swapVerticalCentered" DefaultValue="Swap Vertically Centered"/>
+        <bt:String id="Label.arrangeCircular" DefaultValue="Circular"/>
+        <bt:String id="Label.rotateMenu" DefaultValue="Rotate"/>
+        <bt:String id="Label.rotateLeft" DefaultValue="Rotate Left 90°"/>
+        <bt:String id="Label.rotateRight" DefaultValue="Rotate Right 90°"/>
+        <bt:String id="Label.rotateMatch" DefaultValue="Match Rotation"/>
+        <bt:String id="Label.selectMenu" DefaultValue="Select Similar"/>
+        <bt:String id="Label.selectSameType" DefaultValue="Same Type"/>
+        <bt:String id="Label.selectSameFill" DefaultValue="Same Fill"/>
+        <bt:String id="Label.selectSameSize" DefaultValue="Same Size"/>
+        <bt:String id="Label.widthMenu" DefaultValue="Width"/>
+        <bt:String id="Label.sameWidth" DefaultValue="Align Width"/>
+        <bt:String id="Label.widthUp" DefaultValue="Increase Width"/>
+        <bt:String id="Label.widthDown" DefaultValue="Decrease Width"/>
+        <bt:String id="Label.heightMenu" DefaultValue="Height"/>
+        <bt:String id="Label.sameHeight" DefaultValue="Align Height"/>
+        <bt:String id="Label.heightUp" DefaultValue="Increase Height"/>
+        <bt:String id="Label.heightDown" DefaultValue="Decrease Height"/>
+        <bt:String id="Label.sameSize" DefaultValue="Width and Height"/>
+        <bt:String id="Label.stretchMenu" DefaultValue="Stretch"/>
+        <bt:String id="Label.stretchLeft" DefaultValue="Stretch Left"/>
+        <bt:String id="Label.stretchRight" DefaultValue="Stretch Right"/>
+        <bt:String id="Label.stretchUp" DefaultValue="Stretch Up"/>
+        <bt:String id="Label.stretchDown" DefaultValue="Stretch Down"/>
+        <bt:String id="Label.fillMenu" DefaultValue="Fill"/>
+        <bt:String id="Label.fillLeft" DefaultValue="Fill Left"/>
+        <bt:String id="Label.fillRight" DefaultValue="Fill Right"/>
+        <bt:String id="Label.fillUp" DefaultValue="Fill Up"/>
+        <bt:String id="Label.fillDown" DefaultValue="Fill Down"/>
+        <bt:String id="Label.resizerPane" DefaultValue="Magic Resizer"/>
+        <bt:String id="Label.elementsPane" DefaultValue="Elements"/>
+        <bt:String id="Label.alignRadius" DefaultValue="Match Corners"/>
+        <bt:String id="Label.chartPane" DefaultValue="Chart"/>
+        <bt:String id="Label.tools" DefaultValue="Tools"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Tip.alignLeft" DefaultValue="Align left edges to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.alignCenter" DefaultValue="Align horizontal centers to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.alignRight" DefaultValue="Align right edges to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.alignTop" DefaultValue="Align top edges to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.alignMiddle" DefaultValue="Align vertical centers to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.alignBottom" DefaultValue="Align bottom edges to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.dockMenu" DefaultValue="Move shapes until they touch the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.dockLeft" DefaultValue="Move left until touching the Master (last selected shape), or the slide if only one is selected edge"/>
+        <bt:String id="Tip.dockRight" DefaultValue="Move right until touching the Master (last selected shape), or the slide if only one is selected edge"/>
+        <bt:String id="Tip.dockUp" DefaultValue="Move up until touching the Master (last selected shape), or the slide if only one is selected edge"/>
+        <bt:String id="Tip.dockDown" DefaultValue="Move down until touching the Master (last selected shape), or the slide if only one is selected edge"/>
+        <bt:String id="Tip.goldenCanon" DefaultValue="Place vertically inside the Master (last selected shape) with the bottom margin twice the top, or the slide if only one is selected"/>
+        <bt:String id="Tip.cornerMenu" DefaultValue="Center shapes on a corner of the Master (last selected shape)"/>
+        <bt:String id="Tip.cornerTopLeft" DefaultValue="Center on the top left corner of the Master (last selected shape)"/>
+        <bt:String id="Tip.cornerTopRight" DefaultValue="Center on the top right corner of the Master (last selected shape)"/>
+        <bt:String id="Tip.cornerBottomLeft" DefaultValue="Center on the bottom left corner of the Master (last selected shape)"/>
+        <bt:String id="Tip.cornerBottomRight" DefaultValue="Center on the bottom right corner of the Master (last selected shape)"/>
+        <bt:String id="Tip.alignInTable" DefaultValue="Fit shapes to the table cells they sit over. Select the table last."/>
+        <bt:String id="Tip.savePosition" DefaultValue="Remember the position and size of the last selected shape"/>
+        <bt:String id="Tip.applyMenu" DefaultValue="Apply the saved position and size"/>
+        <bt:String id="Tip.applyPosition" DefaultValue="Apply saved position and size"/>
+        <bt:String id="Tip.applyTopLeft" DefaultValue="Move so the top left point matches the saved one"/>
+        <bt:String id="Tip.applyTopCenter" DefaultValue="Move so the top center point matches the saved one"/>
+        <bt:String id="Tip.applyTopRight" DefaultValue="Move so the top right point matches the saved one"/>
+        <bt:String id="Tip.applyMiddleLeft" DefaultValue="Move so the middle left point matches the saved one"/>
+        <bt:String id="Tip.applyMiddleCenter" DefaultValue="Move so the middle center point matches the saved one"/>
+        <bt:String id="Tip.applyMiddleRight" DefaultValue="Move so the middle right point matches the saved one"/>
+        <bt:String id="Tip.applyBottomLeft" DefaultValue="Move so the bottom left point matches the saved one"/>
+        <bt:String id="Tip.applyBottomCenter" DefaultValue="Move so the bottom center point matches the saved one"/>
+        <bt:String id="Tip.applyBottomRight" DefaultValue="Move so the bottom right point matches the saved one"/>
+        <bt:String id="Tip.applyWidth" DefaultValue="Apply saved width"/>
+        <bt:String id="Tip.applyHeight" DefaultValue="Apply saved height"/>
+        <bt:String id="Tip.applySize" DefaultValue="Apply saved width and height"/>
+        <bt:String id="Tip.distHMenu" DefaultValue="Even horizontal spacing, or nudge the gaps"/>
+        <bt:String id="Tip.distributeHorizontal" DefaultValue="Equalize horizontal gaps (3 or more shapes)"/>
+        <bt:String id="Tip.gapWiderH" DefaultValue="Widen each horizontal gap by 2pt"/>
+        <bt:String id="Tip.gapNarrowerH" DefaultValue="Narrow each horizontal gap by 2pt"/>
+        <bt:String id="Tip.distVMenu" DefaultValue="Even vertical spacing, or nudge the gaps"/>
+        <bt:String id="Tip.distributeVertical" DefaultValue="Equalize vertical gaps (3 or more shapes)"/>
+        <bt:String id="Tip.gapTallerV" DefaultValue="Widen each vertical gap by 2pt"/>
+        <bt:String id="Tip.gapShorterV" DefaultValue="Narrow each vertical gap by 2pt"/>
+        <bt:String id="Tip.matrixMenu" DefaultValue="Arrange in a grid or stack, in selection order"/>
+        <bt:String id="Tip.matrixPane" DefaultValue="Choose rows, columns and gap in the Tools panel"/>
+        <bt:String id="Tip.stackHorizontal" DefaultValue="Touching row in selection order"/>
+        <bt:String id="Tip.stackVertical" DefaultValue="Touching column in selection order"/>
+        <bt:String id="Tip.swapMenu" DefaultValue="Swap 2 or more shapes; with more, each takes the next one's place in selection order"/>
+        <bt:String id="Tip.swap" DefaultValue="Swap top-left positions"/>
+        <bt:String id="Tip.swapHorizontal" DefaultValue="Swap left positions only"/>
+        <bt:String id="Tip.swapVertical" DefaultValue="Swap top positions only"/>
+        <bt:String id="Tip.swapCentered" DefaultValue="Swap center points"/>
+        <bt:String id="Tip.swapHorizontalCentered" DefaultValue="Swap horizontal centers only"/>
+        <bt:String id="Tip.swapVerticalCentered" DefaultValue="Swap vertical centers only"/>
+        <bt:String id="Tip.arrangeCircular" DefaultValue="Place 3 or more shapes evenly on a circle, in selection order"/>
+        <bt:String id="Tip.rotateMenu" DefaultValue="Rotate selected shapes or match the Master's rotation"/>
+        <bt:String id="Tip.rotateLeft" DefaultValue="Rotate each selected shape 90° counterclockwise"/>
+        <bt:String id="Tip.rotateRight" DefaultValue="Rotate each selected shape 90° clockwise"/>
+        <bt:String id="Tip.rotateMatch" DefaultValue="Give selected shapes the rotation of the Master (last selected shape)"/>
+        <bt:String id="Tip.selectMenu" DefaultValue="Select every shape on the slide like the Master (last selected shape)"/>
+        <bt:String id="Tip.selectSameType" DefaultValue="Select shapes of the same type as the Master (last selected shape)"/>
+        <bt:String id="Tip.selectSameFill" DefaultValue="Select shapes with the same fill color as the Master (last selected shape)"/>
+        <bt:String id="Tip.selectSameSize" DefaultValue="Select shapes with the same width and height as the Master (last selected shape)"/>
+        <bt:String id="Tip.widthMenu" DefaultValue="Match or nudge width"/>
+        <bt:String id="Tip.sameWidth" DefaultValue="Match width of the Master (last selected shape)"/>
+        <bt:String id="Tip.widthUp" DefaultValue="Widen by 2pt"/>
+        <bt:String id="Tip.widthDown" DefaultValue="Narrow by 2pt"/>
+        <bt:String id="Tip.heightMenu" DefaultValue="Match or nudge height"/>
+        <bt:String id="Tip.sameHeight" DefaultValue="Match height of the Master (last selected shape)"/>
+        <bt:String id="Tip.heightUp" DefaultValue="Taller by 2pt"/>
+        <bt:String id="Tip.heightDown" DefaultValue="Shorter by 2pt"/>
+        <bt:String id="Tip.sameSize" DefaultValue="Match width and height of the Master (last selected shape)"/>
+        <bt:String id="Tip.stretchMenu" DefaultValue="Stretch an edge to the matching edge of the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.stretchLeft" DefaultValue="Stretch the left edge to the same edge of the Master (last selected shape)"/>
+        <bt:String id="Tip.stretchRight" DefaultValue="Stretch the right edge to the same edge of the Master (last selected shape)"/>
+        <bt:String id="Tip.stretchUp" DefaultValue="Stretch the top edge to the same edge of the Master (last selected shape)"/>
+        <bt:String id="Tip.stretchDown" DefaultValue="Stretch the bottom edge to the same edge of the Master (last selected shape)"/>
+        <bt:String id="Tip.fillMenu" DefaultValue="Stretch an edge to close the gap to the Master (last selected shape), or the slide if only one is selected"/>
+        <bt:String id="Tip.fillLeft" DefaultValue="Stretch left until meeting the Master (last selected shape)"/>
+        <bt:String id="Tip.fillRight" DefaultValue="Stretch right until meeting the Master (last selected shape)"/>
+        <bt:String id="Tip.fillUp" DefaultValue="Stretch up until meeting the Master (last selected shape)"/>
+        <bt:String id="Tip.fillDown" DefaultValue="Stretch down until meeting the Master (last selected shape)"/>
+        <bt:String id="Tip.resizerPane" DefaultValue="Scale by percent or to a width, including text and line weight, in the Tools panel"/>
+        <bt:String id="Tip.elementsPane" DefaultValue="Harvey balls, checkboxes, process flows and agenda slides in the Tools panel"/>
+        <bt:String id="Tip.alignRadius" DefaultValue="Give selected rounded rectangles the same corner radius as the Master (last selected shape)"/>
+        <bt:String id="Tip.chartPane" DefaultValue="Insert or edit column, bar, Mekko, line, pie, scatter, waterfall, table and Gantt charts in the Tools panel"/>
+        <bt:String id="Tip.tools" DefaultValue="Matrix, Magic Resizer, Format Wizard, Color Picker and Check Presentation"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

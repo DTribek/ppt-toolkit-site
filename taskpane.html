@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PPT Toolkit</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="taskpane.js"></script>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 12px; font: 13px -apple-system, sans-serif; color: #1f2933; background: #fff; }
+      section { padding: 12px 0; border-top: 1px solid #e4e7eb; }
+      section:first-of-type { border-top: 0; padding-top: 0; }
+      details { padding: 10px 0; border-top: 1px solid #e4e7eb; }
+      details:first-of-type { border-top: 0; padding-top: 0; }
+      summary { margin-bottom: 8px; font-weight: 600; cursor: pointer; }
+      details:not([open]) summary { margin-bottom: 0; }
+      input[type="text"] { padding: 4px; font: inherit; }
+      .row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px; }
+      .row:last-child { margin-bottom: 0; }
+      button { padding: 5px 10px; font: inherit; color: #fff; background: #1f4e79; border: 0; border-radius: 4px; cursor: pointer; }
+      button:hover { background: #173a5a; }
+      button.quiet { color: #1f4e79; background: #e8eef4; }
+      input[type="number"] { width: 64px; padding: 4px; font: inherit; }
+      input[type="color"] { width: 32px; height: 26px; padding: 0; border: 1px solid #cbd2d9; background: none; }
+      #swatches { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+      .swatch { position: relative; width: 28px; height: 28px; padding: 0; border: 1px solid #cbd2d9; border-radius: 4px; }
+      .swatch span { display: none; position: absolute; top: -6px; right: -6px; width: 14px; height: 14px; font-size: 10px; line-height: 14px; color: #fff; background: #52606d; border-radius: 50%; }
+      .swatch:hover span { display: block; }
+      textarea { width: 100%; margin-bottom: 6px; font: 12px ui-monospace, Menlo, monospace; tab-size: 10; }
+      select { font: inherit; padding: 3px; }
+      button.small { padding: 2px 8px; font-size: 12px; }
+      #grid table { border-collapse: collapse; margin-bottom: 6px; }
+      #grid input { width: 64px; padding: 2px 4px; font: 12px ui-monospace, Menlo, monospace; border: 1px solid #cbd2d9; }
+      #grid td:first-child input, #grid tr:first-child input { font-weight: 600; }
+      .hint { color: #7b8794; font-size: 12px; }
+      #status { position: sticky; bottom: 0; min-height: 20px; padding-top: 6px; color: #52606d; background: #fff; }
+      #issues { margin: 8px 0 0; padding: 0; list-style: none; }
+      #issues button { display: block; width: 100%; margin-bottom: 4px; text-align: left; color: inherit; background: #f5f7fa; }
+      #issues button:hover { background: #e8eef4; }
+    </style>
+  </head>
+  <body>
+    <div class="row"><button id="selfTest">Run self-test</button><span class="hint">Adds test slides at the end</span></div>
+    <details open><summary>Charts</summary>
+      <div class="row">
+        <select id="chartType">
+          <optgroup label="Column">
+            <option value="stacked">Stacked column</option>
+            <option value="clustered">Clustered column</option>
+            <option value="percent">100% column</option>
+            <option value="combo">Column + line</option>
+          </optgroup>
+          <optgroup label="Bar">
+            <option value="bar">Stacked bar</option>
+            <option value="clusteredBar">Clustered bar</option>
+            <option value="percentBar">100% bar</option>
+          </optgroup>
+          <optgroup label="Mekko">
+            <option value="mekko">Mekko (100%)</option>
+            <option value="mekkoUnit">Mekko (units)</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="line">Line</option>
+            <option value="pie">Pie</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="scatter">Scatter</option>
+            <option value="bubble">Bubble</option>
+            <option value="waterfall">Waterfall</option>
+            <option value="waterfallBar">Horizontal waterfall</option>
+            <option value="table">Table</option>
+            <option value="gantt">Gantt</option>
+          </optgroup>
+        </select>
+        <button id="chartSample" class="quiet">Load sample</button>
+      </div>
+      <div class="row">
+        <label><input id="gridMode" type="checkbox" /> Grid editor</label>
+        <button id="gridAddRow" class="quiet small">+ Row</button>
+        <button id="gridAddCol" class="quiet small">+ Column</button>
+      </div>
+      <div id="grid"></div>
+      <textarea id="chartData" rows="7" spellcheck="false" placeholder="Paste from Excel"></textarea>
+      <div class="row hint" id="chartHint"></div>
+      <div class="row">
+        <label><input id="optLabels" type="checkbox" checked /> Labels</label>
+        <label><input id="optTotals" type="checkbox" checked /> Totals</label>
+        <label><input id="optLegend" type="checkbox" checked /> Legend</label>
+        <label><input id="optAxis" type="checkbox" /> Axis</label>
+        <label><input id="optCagr" type="checkbox" /> CAGR</label>
+        <label><input id="optDiff" type="checkbox" /> Difference</label>
+        <label><input id="optTable" type="checkbox" /> Data table</label>
+      </div>
+      <div class="row">
+        <label>Decimals <select id="optDecimals"><option value="">Auto</option><option>0</option><option>1</option><option>2</option></select></label>
+        <label>Unit <select id="optUnit"><option value="">None</option><option value="k">k</option><option value="m">m</option><option value="bn">bn</option></select></label>
+        <label>Sort <select id="optSort"><option value="none">None</option><option value="desc">Largest first</option><option value="asc">Smallest first</option></select></label>
+      </div>
+      <div class="row">
+        <label>Compare <input id="optFrom" type="number" min="1" step="1" placeholder="first" /></label>
+        <label>to <input id="optTo" type="number" min="1" step="1" placeholder="last" /></label>
+        <span class="hint">category numbers for CAGR and Difference</span>
+      </div>
+      <div class="row">
+        <label>Value line <input id="optValueLine" type="number" placeholder="none" /></label>
+        <label>Scale max <input id="optScaleMax" type="number" placeholder="auto" /></label>
+        <label>"Other" below <input id="optOther" type="number" min="0" step="1" placeholder="off" /> %</label>
+      </div>
+      <div class="row">
+        <label>Gantt scale <select id="optGanttScale"><option value="week">Weeks</option><option value="month" selected>Months</option><option value="quarter">Quarters</option></select></label>
+        <label><input id="optToday" type="checkbox" /> Today line</label>
+      </div>
+      <div class="row">Series colors <button id="resetColors" class="quiet small">Reset</button></div>
+      <div id="seriesColors" class="row"></div>
+      <div class="row">
+        <button id="chartInsert">Insert chart</button>
+        <button id="chartLoad" class="quiet">Edit selected</button>
+        <button id="chartUpdate" class="quiet">Update selected</button>
+      </div>
+      <div class="row">
+        <button id="matchScale" class="quiet">Same scale for selected charts</button>
+      </div>
+    </details>
+
+    <details><summary>Brand Style</summary>
+      <div class="row hint">Used by new and updated charts and by elements.</div>
+      <div class="row" id="brandPalette"></div>
+      <div class="row">
+        <label>Positive <input id="brandPositive" type="color" /></label>
+        <label>Negative <input id="brandNegative" type="color" /></label>
+        <label>Total <input id="brandTotal" type="color" /></label>
+      </div>
+      <div class="row">
+        <label>Text <input id="brandText" type="color" /></label>
+        <label>Axis <input id="brandAxis" type="color" /></label>
+        <label>Font <input id="brandFont" type="text" size="10" placeholder="theme font" /></label>
+      </div>
+      <div class="row">
+        <button id="brandSave">Save style</button>
+        <button id="brandReset" class="quiet">Reset to default</button>
+      </div>
+    </details>
+
+    <details><summary>Align in Matrix</summary>
+      <div class="row">
+        <label>Columns <input id="columns" type="number" min="1" step="1" value="3" /></label>
+        <label>Gap <input id="gap" type="number" min="0" step="1" value="10" /> pt</label>
+      </div>
+      <div class="row">
+        <button id="matrix">Arrange in grid</button>
+        <button data-stack="true" class="quiet">Stack Across</button>
+        <button data-stack="false" class="quiet">Stack Down</button>
+      </div>
+      <div class="row hint">Uses selection order, starting at the first shape you select.</div>
+    </details>
+
+    <details><summary>Magic Resizer</summary>
+      <div class="row">
+        <label><input type="radio" name="resizeMode" value="relative" checked /> Scale to</label>
+        <input id="scale" type="number" min="1" step="5" value="90" /> %
+      </div>
+      <div class="row">
+        <label><input type="radio" name="resizeMode" value="absolute" /> Total width</label>
+        <input id="targetWidth" type="number" min="1" step="10" value="300" /> pt
+      </div>
+      <div class="row">
+        <label><input id="scaleText" type="checkbox" checked /> Font size</label>
+        <label><input id="scaleLine" type="checkbox" checked /> Line weight</label>
+      </div>
+      <div class="row"><button id="resize">Resize selection</button></div>
+    </details>
+
+    <details><summary>Format Wizard</summary>
+      <div class="row">
+        <label><input id="fmtFill" type="checkbox" checked /> Fill</label>
+        <label><input id="fmtLine" type="checkbox" checked /> Line</label>
+        <label><input id="fmtText" type="checkbox" checked /> Text</label>
+      </div>
+      <div class="row"><button id="format">Copy last selected shape's format to the rest</button></div>
+    </details>
+
+    <details><summary>Color Picker</summary>
+      <div class="row">
+        <label><input type="radio" name="target" value="fill" checked /> Fill</label>
+        <label><input type="radio" name="target" value="line" /> Line</label>
+        <label><input type="radio" name="target" value="text" /> Text</label>
+      </div>
+      <div id="swatches"></div>
+      <div class="row">
+        <input id="newColor" type="color" value="#1f4e79" />
+        <button id="addColor" class="quiet">Add color</button>
+        <button id="grabColor" class="quiet">Add from selection</button>
+      </div>
+    </details>
+
+    <details><summary>Check Presentation</summary>
+      <div class="row"><button id="check">Check all slides</button></div>
+      <ul id="issues"></ul>
+    </details>
+
+    <details><summary>Elements</summary>
+      <div class="row">
+        <label>Harvey ball
+          <select id="harveyLevel"><option value="0">0%</option><option value="1">25%</option><option value="2">50%</option><option value="3">75%</option><option value="4">100%</option></select>
+        </label>
+        <button id="harvey" class="quiet">Insert</button>
+      </div>
+      <div class="row">
+        <label>Checkbox
+          <select id="checkState"><option value="check">Checked</option><option value="cross">Crossed</option><option value="empty">Empty</option></select>
+        </label>
+        <button id="checkbox" class="quiet">Insert</button>
+      </div>
+      <div class="row">Process flow, one step per line</div>
+      <textarea id="flowSteps" rows="4">Analyze
+Design
+Build
+Launch</textarea>
+      <div class="row"><button id="flow">Insert process flow</button></div>
+      <div class="row">Corner radius <input id="radius" type="number" min="0" step="1" value="6" /> pt
+        <button id="setRadius" class="quiet">Set on selection</button>
+      </div>
+      <div class="row hint">Rounded corners: Shape group on the ribbon matches the Master's radius.</div>
+    </details>
+
+    <details><summary>Agenda</summary>
+      <div class="row">One topic per line</div>
+      <textarea id="agendaItems" rows="5">Situation
+Options
+Recommendation
+Next steps</textarea>
+      <div class="row">
+        <button id="agendaOverview">Insert overview slide</button>
+        <button id="agendaSlides" class="quiet">Insert a slide per topic</button>
+      </div>
+      <div class="row">
+        <label><input id="agendaPages" type="checkbox" /> Page numbers</label>
+        <button id="agendaUpdate" class="quiet">Update all agendas</button>
+      </div>
+      <div class="row hint">Slides are added after the current slide, using its layout. Update all agendas applies the topics above to every agenda in the deck.</div>
+    </details>
+
+    <details><summary>Text</summary>
+      <div class="row">Paste into selected shapes, one line per shape in selection order</div>
+      <textarea id="pasteLines" rows="4"></textarea>
+      <div class="row"><button id="pasteText">Fill selected shapes</button></div>
+      <div class="row">
+        Font size <button id="fontUp" class="quiet">A+</button><button id="fontDown" class="quiet">A−</button>
+        <button id="decimals" class="quiet">Swap 1,000.5 ↔ 1.000,5</button>
+      </div>
+      <div class="row">
+        <label>Replace font <input id="fontFrom" type="text" placeholder="Arial" size="9" /></label>
+        <label>with <input id="fontTo" type="text" placeholder="Calibri" size="9" /></label>
+        <button id="replaceFont" class="quiet">All slides</button>
+      </div>
+    </details>
+
+    <details><summary>Symbols and Fields</summary>
+      <div class="row" id="symbols"></div>
+      <div class="row hint">Inserts at the text cursor, or as a new text box when no text is selected.</div>
+      <div class="row">
+        <button id="insertFileName" class="quiet">Insert file name</button>
+        <button id="insertFilePath" class="quiet">Insert file path</button>
+      </div>
+    </details>
+
+    <details><summary>Clean Up</summary>
+      <div class="row"><button id="cleanAlt" class="quiet">Remove all alternative texts</button></div>
+      <div class="row"><button id="cleanEmpty" class="quiet">Delete empty text boxes</button></div>
+      <div class="row hint">Each asks you to click again to confirm. Speaker notes and animations can't be removed by add-ins.</div>
+    </details>
+
+    <div id="status" role="status"></div>
+  </body>
+</html>
